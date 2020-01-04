@@ -20,7 +20,7 @@ def reduce(source_array, starting_point=nil)
     newest = source_array[0]
     i = 1
     while i < source_array.length do
-      newest = yield(starting_point, source_array[i])
+      newest = yield(newest, source_array[i])
       i+=1
     end
   end
